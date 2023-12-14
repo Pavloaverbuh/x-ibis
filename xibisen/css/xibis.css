@@ -1,0 +1,768 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    min-width: 1519.2px;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    
+}
+ul{
+    padding: 0;
+}
+@font-face {
+    font-family: Monument Extended;
+    src: url(/xibisen/fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
+}
+@font-face {
+    font-family: BDO Grotesk;
+    src: url(/xibisen/fonts/bdo-grotesk-font-family-1696526625-0/BDOGrotesk-Medium-BF648a656fc86b8.ttf);
+}
+
+.wrapper{
+    max-width: 1100px;
+    margin-left: 206.6px;
+    margin-right: 206.6px;
+}
+
+
+.button a.button__title {
+    display: inline-block; /* Делаем кнопку блочным элементом */
+    padding: 16px 40px; /* Задаем внутренние отступы (на ваш выбор) */
+    background-color:#E75934; /* Задаем цвет фона кнопки */
+    color: #fff; /* Задаем цвет текста */
+    text-decoration: none; /* Убираем подчеркивание текста (если это ссылка) */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 4px; /* Задаем скругление углов (на ваш выбор) */
+    cursor: pointer; /* Задаем стиль курсора при наведении на кнопку */
+    transition: background-color 0.3s;
+}
+.button a.button__title:hover {
+    background-color: #D34721;
+}
+.button a.button__title:active {
+    background-color: #A93719;
+    transform: scale(0.97);
+}
+.button a.button__title:disabled {
+    background-color: #EC957E;
+    cursor: not-allowed;
+}
+/*header styles start*/
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e9ebeb;
+}
+
+.header__wrapper{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 1110px;
+    height: 80px;
+    align-items: center;
+    
+}
+
+.header__list{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 489.76px;
+}
+
+.header__link{
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    color: #333333;;
+}
+.header__link:hover, .header__link:focus, .header__link:active{
+    color: #E75934;
+}
+
+.header__logo{
+    width: 107.54px;
+    height: 21.84px;
+    
+}
+
+.header__item{
+    margin-right: 48px;
+}
+.header__item:last-child{
+    margin-right: 0px;
+}
+
+li{
+    display: flex;
+}
+
+.globallang{
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+.globallang img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+.globalsel{
+    position: relative;
+}
+.globallang img.default{
+    opacity: 1;
+    display: flex;
+    position: absolute;
+}
+.globallang img.hover{
+    opacity: 0;
+}
+.globallang:hover .globalsel img.default {
+    opacity: 0;
+}
+.globallang:hover .globalsel img.hover {
+    opacity: 1;
+}
+.langsel{
+    display: none;
+    width: 56px;
+    height: 95px;
+    top: 10px;
+    left: -15px;
+    padding: 16px;
+    border-radius: 12px;
+    gap: 12px;
+    background-color: #FFFFFF;
+    margin-top: 16px;
+    position: absolute;
+}
+.globallang:hover .langsel, .langsel:hover{
+    display: block;
+}
+
+
+.lang{
+    width: 21px;
+    height: 22px;
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #514E4E;
+    text-decoration: none;
+}
+.lang:hover, .lang:focus, .lang:active{
+    opacity: .75;
+    color: #E75934;
+}
+/*header styles end*/
+
+/*intro styles start*/
+.intro{
+    min-height: 100vh;
+    background: url(../img/introbg.png) no-repeat;
+    background-color: #E7E8E8;
+    background-size: cover;
+    padding-top: 187px;
+}
+
+.intro__title{
+    font-family: Monument Extended;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 598px;
+    height: 224px;
+    color: #333333;
+} 
+
+.button__getintouch{
+    display: inline-block; /* Делаем кнопку блочным элементом */
+    padding: 16px 40px; /* Задаем внутренние отступы (на ваш выбор) */
+    background-color:#E75934; /* Задаем цвет фона кнопки */
+    color: #fff; /* Задаем цвет текста */
+    text-decoration: none; /* Убираем подчеркивание текста (если это ссылка) */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 4px; /* Задаем скругление углов (на ваш выбор) */
+    cursor: pointer; /* Задаем стиль курсора при наведении на кнопку */
+}
+
+.button__title{
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff; 
+    text-decoration: none; 
+}
+/*intro styles end*/
+
+/*partners styles start*/
+.partners{
+    background-color: #FAFAFA;
+}
+.partners__wrapper{
+    top: 700px;
+    
+    gap: 71px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.partners__title{
+    list-style-type: none; 
+    padding: 0;
+    top: 10px; 
+    right: 10px; 
+    width: 375px;
+    height: 50px;
+    gap: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 35px;
+}
+
+li{
+   display: flex; 
+}
+
+.title1{
+    font-family: Monument Extended;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
+
+}
+
+.title2{
+    width: 164px;
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    color: #333333; 
+}
+.title2:last-child{
+    margin-right: 0px;
+}
+
+/*partners styles end*/
+
+/*services styles start*/
+.title3{
+    width: 224px;
+    height: 29px;
+    margin-top: 120px;
+    left: 165px;
+    font-family: Monument Extended;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
+}
+.services__wrapper{
+    max-width: 1110px;
+    height: 228px;
+    top: 1001px;
+    left: 165px;
+    gap: 30px;
+    display: flex;
+    
+
+}
+
+.textcard__wrapper{
+    max-width: 290px;
+    height: 156px;
+    gap: 24px;
+    margin: 30px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    text-decoration: none;
+}
+
+.itemservices{
+    width: 24px;
+    height: 24px;
+      
+}
+.services__title{
+    width: 197px;
+    height: 22px;
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
+}
+.services__text{
+    width: 290px;
+    height: 78px;
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #514E4E;
+}
+.services__card1, .services__card2, .services__card3, .services__card4, .services__card5{
+    background: #F7F9FB;
+    border-radius: 12px;
+}
+.services__card1:hover, .services__card1:focus, .services__card1:active{
+    background: #E9EBEB;
+    width: 350px;
+    height: 228px;
+    padding: 36px, 30px, 36px, 30px;
+    border-radius: 12px;
+    gap: 16px;
+    display: flex;
+}
+
+.services__card2:hover, .services__card2:focus, .services__card2:active{
+    background: #E9EBEB;
+    width: 350px;
+    height: 228px;
+    padding: 36px, 30px, 36px, 30px;
+    border-radius: 12px;
+    gap: 16px;
+    display: flex;
+
+}
+.services__card3:hover, .services__card3:focus, .services__card3:active{
+    background: #E9EBEB;
+    width: 350px;
+    height: 228px;
+    padding: 36px, 30px, 36px, 30px;
+    border-radius: 12px;
+    gap: 16px;
+    display: flex;
+}
+
+
+.services__wrapper2{
+    max-width: 730px;
+    height: 200px;
+    margin-left: 0;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 120px;
+}
+.services__card4:hover, .services__card4:focus, .services__card4:active{
+    background: #E9EBEB;
+    width: 350px;
+    height: 228px;
+    padding: 36px, 30px, 36px, 30px;
+    border-radius: 12px;
+    gap: 16px;
+    display: flex;
+}
+.services__card5:hover, .services__card5:focus, .services__card5:active{
+    background: #E9EBEB;
+    width: 350px;
+    height: 228px;
+    padding: 36px, 30px, 36px, 30px;
+    border-radius: 12px;
+    gap: 16px;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+/*services styles end*/
+
+/*aboutus styles start*/
+
+.aboutus{
+    background: #FAFAFA;
+}
+.aboutus__wrapper{
+    display: flex;
+    justify-content: space-between;
+    height: 676px;
+    top: 1579px;
+    gap: 96px;
+}
+
+.title4{
+    width: 379px;
+    height: 102px;
+    font-family: Monument Extended;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    margin-top: 120px;
+    margin-bottom: 120px; 
+    color: #333333;
+}
+
+.aboutustext__wrapper{
+    max-width: 540px;
+    height: 178px;
+    gap: 32px;
+    margin-left: 96px;
+    margin-top: 104px;
+    margin-bottom: 120px; 
+}
+
+.title5{
+    height: 66px;
+    font-family: BDO Grotesk;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 36px;
+    color: #333333;
+}
+.title6{
+    height: 232px;
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 48px;
+    color: #514E4E;
+
+}
+
+
+
+.aboutus2_wrapper{
+    max-width: 1110px;
+    padding-top: 120px;
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+    
+.aboutustext{
+    max-width: 540px;
+    gap: 32px;
+    margin-right: 100px;
+    
+}
+
+.title7{
+    width: 540px;
+    height: 68px;
+    margin-bottom: 32px;
+    color: var(--Title, #333);
+    font-family: Monument Extended;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 33.6px */
+    
+}
+
+.title8{
+    width: 540px;
+    color: #514E4E;
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26.4px;
+    
+}
+
+.aboutusimg1{
+   display: flex;
+   flex-wrap: nowrap; 
+   max-width: 470px;
+   padding: 2px 0px 1px 1px;
+   justify-content: space-between;
+}
+.cisco{
+    margin-right: 50px;
+}
+.aws{
+    height: 140px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.synpart{
+    height: 135px;
+    margin-right: 50px;
+}
+
+.crowdstrike{
+    height: 50px;
+    margin-left: 675px;
+    
+}
+.apple{
+    height: 45px;
+    margin-left: 725px;
+    margin-bottom: 120px;
+}
+.polyhp{
+    margin-top: 30px;
+    height: 55px;
+    margin-left: 940px;
+}
+/*aboutus styles end*/
+
+/*getintouch styles start*/
+.getintouch{
+    background: #FAFAFA;
+}
+.getintouch_wrapper{
+    max-width: 1110px;
+    height: 646px;
+    justify-content: space-between;
+    display: flex;
+    
+
+    
+}
+
+.getintouchtext{
+    max-width: 540px;
+    height: 286px;
+    gap: 36px;
+    margin-top: 120px;
+    
+    
+}
+.title9{
+    width: 540px;
+    height: 34px;
+    font-family: Monument Extended;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 36px;
+    color: #333333;
+}
+.title10{
+    width: 540px;
+    height: 52px;
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #514E4E;
+    margin-bottom: 36px;
+}
+.mail{
+    display: flex;
+    
+}
+.mailtext{
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
+    margin-left: 16px;
+}
+
+.phone{
+    display: flex;
+    margin-bottom: 13px;
+}
+.phonetext{
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 16px;
+    color: #333333;
+}
+
+.pointer{
+    display: flex;
+}
+.pointertext{
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 16px;
+    color: #333333;
+}
+
+
+.formwrapper{
+    max-width: 475px;
+    height: 406px;
+    gap: 48px;
+    margin-top: 120px;
+    
+}
+
+.formtext{
+    margin-bottom: 48px;
+    width: 475px;
+    height: 304px;
+    gap: 16px;
+
+}
+.formline{
+    width: 475px;
+    height: 65px;
+    gap: 6px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background: #FAFAFA;
+    
+}
+input{
+    width: 475px;
+    height: 65px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #E0E0E0;
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    background: #FAFAFA;
+}
+
+
+.formbutton input[type="submit"] {
+    width: 475px;
+    height: 54px;
+    padding: 16px 40px; 
+    border-radius: 6px;
+    background-color: #E75934; 
+    border: none;
+    cursor: pointer; 
+    box-shadow: none;
+    outline: none;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 15px;
+    
+    text-align: center;
+}
+.formbutton input[type="submit"]:hover {
+    background-color: #D34721;
+}
+.formbutton input[type="submit"]:active {
+    background-color: #A93719;
+    transform: scale(0.97);
+}
+.formbutton input[type="submit"]:disabled {
+    background-color: #EC957E;
+    cursor: not-allowed;
+}
+.formbutton input[value="Sent"] {
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+
+
+}
+/*getintouch styles end*/
+/*foooter styles start*/
+.footer{
+    top: 600px;
+    left: 0;
+    width: 100%;
+    background-color: #e9ebeb;
+
+}
+.footer__wrapper{
+    max-width: 1110px;
+    height: 80px;;
+    top: -262px;
+    left: 211px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.footer__list{
+    display: flex;
+    flex-wrap: wrap; 
+    
+}
+
+.footer__link{
+    font-family: BDO Grotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    color: #333333;;
+}
+.footer__link:hover, .footer__link:focus, .footer__link:active{
+    color: #E75934;
+}
+
+.footer__item{
+    margin-right: 48px;
+}
+.footer__item:last-child{
+    margin-right: 0px;
+}
+
+
+
+
+/*foooter styles end*/

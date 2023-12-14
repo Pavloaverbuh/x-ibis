@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-IBIS</title>
+    <link rel="stylesheet" href="./css/itadmin.css">
+    <link rel="icon" href="./img/svg/x.svg" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                <div class="header_logo">
+                    <a href="/xibisen/xibis.html" class="header__logo-link">
+                     <img src="./img/svg/Group.svg" alt="X-IBIS" class="header__logo-pic">
+                    </a>
+                </div>  
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="xibis.html" class="header__link">Home</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/xibisen/xibis.html#services" class="header__link">Services</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/xibisen/xibis.html#aboutus" class="header__link">About us</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/xibisen/xibis.html#getintouch" class="header__link">Contact us</a>
+                        </li>
+                        <li class="globallang">
+                          <div class="globalsel">
+                              <img src="./img/svg/globalbl.svg" class="default">
+                              <img src="./img/svg/global.svg" class="hover">
+                          </div>
+                          <div class="langsel">
+                                  
+                                  <a href="/xibisen/itadmin.html" class="lang">EN</a>
+                                  <p><a href="/xibispl/itadmin_pl.html" class="lang">PL</a>
+                                  
+                                
+                              
+                          </div>
+                        </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <section class="itadmin">
+            <div class="textandarrow">
+                <div class="textwrapper">
+                    <h1 class="title">IT ADMINISTRATION</h1>
+                    <h1 class="title2">Our professional IT administration keeps your tech running smoothly.</h1>
+                </div>
+                <section class="back__button">
+                    <div class="arrowback">
+                        <a href="/xibisen/xibis.html#services" class="back-button-svg">
+                            <img src="./img/svg/arrowback.svg" class="default">
+                            <img src="./img/svg/arrowbackh.svg" class="hover">
+                        </a>
+                    </div>
+                    <h1 class="title3">Back to Services</h1>
+                </section>
+            </div>
+            <div class="custom-scrollbar-container">
+                <div class="custom-scrollbar" id="custom-scrollbar">
+                    <div class="custom-thumb" id="custom-thumb"></div>
+                </div>                          
+                <div class="scroll-content" id="scroll-content">
+                <div class="scrollwrapper">
+                    <div class="scrolltitle">Installation and Configuration of Equipment</div>
+                    <div class="scrolltext">Perform installation and configuration of servers, computers, network devices and other equipment according to business requirements.</div>        
+                </div>
+                <hr>
+                <div class="scrollwrapper">                                 
+                    <div class="scrolltitle">System Maintenance</div>
+                    <div class="scrolltext">Continuous monitoring of system health, performing regular maintenance including upgrades, optimization and troubleshooting.</div>
+                </div>
+                <hr>
+                <div class="scrollwrapper">
+                    <div class="scrolltitle">Operating System Administration</div>
+                    <div class="scrolltext">Managing operating systems, installing patches and updates, ensuring stable and secure operation.</div>
+                </div>
+                <hr>
+                <div class="scrollwrapper">
+                    <div class="scrolltitle">User and Resource Management</div>
+                    <div class="scrolltext">Create and manage user accounts, assign access rights, monitor resource utilization.</div>
+                </div>
+                <hr>
+                <div class="scrollwrapper">
+                    <div class="scrolltitle">Backup and Recovery</div>
+                    <div class="scrolltext">Develop and implement data backup strategies and test recovery procedures.</div>                                    
+                </div>
+                <hr>
+                <div class="scrollwrapper">
+                    <div class="scrolltitle">Technical Support</div>
+                    <div class="scrolltext">Providing technical support to employees on hardware, software and networking issues through various communication channels.</div>
+                </div>
+                <hr>
+                <div class="scrollwrapper">
+                    <div class="scrolltitle">Security Monitoring</div>
+                    <div class="scrolltext">Implement security measures including anti-virus programs, firewalls, intrusion detection systems and log analysis.</div>
+                </div>
+                <hr>
+                <div class="scrollwrapper">
+                    <div class="scrolltitle">Planning and Advice</div>
+                    <div class="scrolltext">Providing consultation and advice on the strategic development of IT infrastructure, as well as planning for growth and expansion.</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        var scrollContent = document.getElementById('scroll-content');
+        var customScrollbar = document.getElementById('custom-scrollbar');
+        var customThumb = document.getElementById('custom-thumb');
+        var thumbHeight = 100; 
+        var scrollContentHeight = scrollContent.scrollHeight;
+        var scrollableContentHeight = scrollContent.clientHeight;
+
+        customThumb.style.height = thumbHeight + 'px';
+
+        scrollContent.addEventListener('scroll', function() {
+            var scrollShare = scrollContent.scrollTop / (scrollContentHeight - scrollableContentHeight);
+            var thumbTop = scrollShare * (scrollableContentHeight - thumbHeight);
+            customThumb.style.top = thumbTop + 'px';
+        });
+
+        customScrollbar.addEventListener('mousedown', startDrag);
+
+        function startDrag(e) {
+            e.preventDefault();
+            var startY = e.pageY - customThumb.offsetTop;
+            document.addEventListener('mousemove', dragThumb);
+            document.addEventListener('mouseup', stopDrag);
+
+            function dragThumb(e) {
+                e.preventDefault();
+                var newY = e.pageY - customScrollbar.getBoundingClientRect().top;
+                var newTop = Math.min(Math.max(0, newY - startY), scrollableContentHeight - thumbHeight);
+                customThumb.style.top = newTop + 'px';
+
+                var scrollShare = newTop / (scrollableContentHeight - thumbHeight);
+                scrollContent.scrollTop = scrollShare * (scrollContentHeight - scrollableContentHeight);
+            }
+
+            function stopDrag() {
+                document.removeEventListener('mousemove', dragThumb);
+                document.removeEventListener('mouseup', stopDrag);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-IBIS</title>
+    <link rel="stylesheet" href="/xibisen/css/itaudit.css">
+    <link rel="icon" href="./img/svg/x.svg" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                <div class="header_logo">
+                    <a href="/xibisen/xibis.html" class="header__logo-link">
+                     <img src="./img/svg/Group.svg" alt="X-IBIS" class="header__logo-pic">
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="xibis.html" class="header__link">Home</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/xibisen/xibis.html#services" class="header__link">Services</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/xibisen/xibis.html#aboutus" class="header__link">About us</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/xibisen/xibis.html#getintouch" class="header__link">Contact us</a>
+                        </li>
+                        <li class="globallang">
+                            <div class="globalsel">
+                                <img src="./img/svg/globalbl.svg" class="default">
+                                <img src="./img/svg/global.svg" class="hover">
+                            </div>
+                            <div class="langsel">
+                                <a href="/xibisen/itaudit.html" class="lang">EN</a>
+                                <p><a href="/xibispl/itaudit_pl.html" class="lang">PL</a>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <section class="itaudit">
+            <div class="textandarrow">
+                <div class="textwrapper">
+                    <h1 class="title">IT AUDIT</h1>
+                    <h1 class="title2">We enable businesses to fully grasp and enhance their information systems.</h1>
+                </div>
+                <section class="back__button">
+                    <div class="arrowback">
+                        <a href="/xibisen/xibis.html#services" class="back-button-svg">
+                            <img src="./img/svg/arrowback.svg" class="default">
+                            <img src="./img/svg/arrowbackh.svg" class="hover">
+                        </a>
+                    </div>
+                    <h1 class="title3">Back to Services</h1>
+                </section>
+            </div>
+            <div class="custom-scrollbar-container">
+                <div class="custom-scrollbar" id="custom-scrollbar">
+                    <div class="custom-thumb" id="custom-thumb"></div>
+                </div>
+                <div class="scroll-content" id="scroll-content">
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Infrastructure Analysis</div>
+                        <div class="scrolltext">Assess the current state of the IT infrastructure, including hardware, software, network topology, and cloud resources.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Security And Vulnerabilities</div>
+                        <div class="scrolltext">Conduct a vulnerability scan, as well as an analysis of security systems including authentication, authorization encryption, and data protection.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Regulatory Compliance</div>
+                        <div class="scrolltext">Ensure that the company is compliant with relevant industry regulations and data security standards (e.g. GDPR, HIPAA) depending on the business area.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Backup And Recovery</div>
+                        <div class="scrolltext">Evaluate data backup strategies and recovery plans to ensure systems can be recovered in the event of failures.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Network Infrastructure</div>
+                        <div class="scrolltext">Analyze network architecture, performance, segmentation, traffic management, and security.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Processes and Performance</div>
+                        <div class="scrolltext">Examine business processes and their alignment with IT systems, identify bottlenecks and suggest improvements to optimize performance.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Resource Management</div>
+                        <div class="scrolltext">Analyze the use of IT resources such as servers, data storage, software licenses to optimize costs.</div>
+                    </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        var scrollContent = document.getElementById('scroll-content');
+        var customScrollbar = document.getElementById('custom-scrollbar');
+        var customThumb = document.getElementById('custom-thumb');
+        var thumbHeight = 100; 
+        var scrollContentHeight = scrollContent.scrollHeight;
+        var scrollableContentHeight = scrollContent.clientHeight;
+
+        customThumb.style.height = thumbHeight + 'px';
+
+        scrollContent.addEventListener('scroll', function() {
+            var scrollShare = scrollContent.scrollTop / (scrollContentHeight - scrollableContentHeight);
+            var thumbTop = scrollShare * (scrollableContentHeight - thumbHeight);
+            customThumb.style.top = thumbTop + 'px';
+        });
+
+        customScrollbar.addEventListener('mousedown', startDrag);
+
+        function startDrag(e) {
+            e.preventDefault();
+            var startY = e.pageY - customThumb.offsetTop;
+            document.addEventListener('mousemove', dragThumb);
+            document.addEventListener('mouseup', stopDrag);
+
+            function dragThumb(e) {
+                e.preventDefault();
+                var newY = e.pageY - customScrollbar.getBoundingClientRect().top;
+                var newTop = Math.min(Math.max(0, newY - startY), scrollableContentHeight - thumbHeight);
+                customThumb.style.top = newTop + 'px';
+
+                var scrollShare = newTop / (scrollableContentHeight - thumbHeight);
+                scrollContent.scrollTop = scrollShare * (scrollContentHeight - scrollableContentHeight);
+            }
+
+            function stopDrag() {
+                document.removeEventListener('mousemove', dragThumb);
+                document.removeEventListener('mouseup', stopDrag);
+            }
+        }
+    </script>
+</body>
+</html>

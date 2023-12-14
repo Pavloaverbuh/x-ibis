@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-IBIS</title>
+    <link rel="stylesheet" href="./css/xibis.css">
+    <link rel="icon" href="./img/svg/x.svg" type="image/png">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', updateMe);
+window.addEventListener('resize', updateMe);
+
+function updateMe() 
+{
+    const mypage = window.innerWidth;
+    document.querySelector("html").style.transform = "scale("+mypage/1536+")";
+    document.querySelector("#box").style.height = document.body.scrollHeight
+    document.querySelector("html").style.transformOrigin = "0 0";
+}
+    </script>
+    <div id="box">
+    <header class="header">
+        <article id="header">
+            <div class="wrapper">
+                <div class="header__wrapper">
+                    <div class="header_logo">
+                        <a href="/xibisen/xibis.html" class="header__logo-link">
+                         <img src="./img/svg/Group.svg" alt="X-IBIS" class="header__logo-pic">
+                        </a>
+                    </div> 
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+    
+                                <a href="xibis.html" class="header__link">Home</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#services" class="header__link">Services</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#aboutus " class="header__link">About us</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#getintouch" class="header__link">Contact us</a>
+                            </li>
+                            <li class="globallang">
+                                <div class="globalsel">
+                                    <img src="./img/svg/globalbl.svg" class="default">
+                                    <img src="./img/svg/global.svg" class="hover">
+                                </div>
+                                <div class="langsel">
+                                        
+                                        <a href="/xibisen/xibis.html" class="lang">EN</a>
+                                        <p><a href="/xibispl/xibis_pl.html" class="lang">PL</a>
+                                        
+                                
+                                </div>
+                            </li>   
+                        </ul>
+                    </nav>
+                      
+                </div>
+            </div>
+        </article>
+    </header>
+    
+    
+    <section class="intro">
+        <div class="wrapper">
+            <h1 class="intro__title">WE WILL MAKE YOUR IT INFRASTRUCTURE RELIABLE, MODERN, AND SECURE.</h1>
+            <div class="button">
+                <a href="#getintouch" class="button__title">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="partners">
+        <article id="partners">
+            <div class="wrapper">
+                <div class="partners__wrapper">
+                        <ul class="partners__title">
+                          <li class="title1">20+</li>
+                          <li class="title2">Have Been Serviced By Our Company</li>  
+                        </ul>
+                 
+                    
+                     <li>
+                        <a href="https://galeinvest.pl/">
+                        <img src="./img/gala.png" alt="Gale Invest"></a>
+                     </li>
+                     <li>
+                        <a href="https://tinesrail.com/">
+                        <img src="./img/svg/tines.svg" alt="Tines"></a>
+                     </li>
+                     <li>
+                        <a href="https://nodral.com/">
+                        <img src="./img/svg/nodral.svg" alt="Nodral"></a>
+                     </li>
+                    
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="services">
+        <article id="services">
+        <div class="wrapper">
+            <h1 class="title3">WHAT WE DO</h1>
+              <div class="services__wrapper">
+                <article class="services__card1">
+                    <a href="./itaudit.html">
+                        <div class="textcard__wrapper">
+                            <div class="itemservices"><img src="./img/svg/itaudit.svg"></div>
+                            <h1 class="services__title">IT Audit</h1>
+                            <h1 class="services__text">We enable businesses to fully grasp and enhance their information systems.</h1>
+                        </div>
+                    </a>
+                </article>
+                <article class="services__card2">
+                    <a href="./security.html">
+                        <div class="textcard__wrapper">
+                            <div class="itemservices"><img src="./img/svg/security.svg"></div>
+                            <h1 class="services__title">Security</h1>
+                            <h1 class="services__text">Focused on safeguarding your business, we offer complex cybersecurity solutions.</h1>
+                        </div>
+                    </a>
+                </article>
+                <article class="services__card3">
+                    <a href="./eri.html">
+                        <div class="textcard__wrapper">
+                            <div class="itemservices"><img src="./img/svg/ensuring.svg"></div>
+                            <h1 class="services__title">Ensuring Reliability Infra</h1>
+                            <h1 class="services__text">Our specialty lies in creating a dependable IT framework for efficient operations.</h1>
+                        </div>
+                    </a>
+                </article>
+              </div>
+            <div class="container2">
+              <div class="services__wrapper2">
+                <article class="services__card4">
+                    <a href="./itadmin.html">
+                        <div class="textcard__wrapper">
+                            <div class="itemservices"><img src="./img/svg/admin.svg"></div>
+                            <h1 class="services__title">IT Administration</h1>
+                            <h1 class="services__text">Our professional IT administration keeps your tech running smoothly.</h1>
+                        </div>
+                    </a>
+                </article>
+                <article class="services__card5">
+                    <a href="./modsol.html">
+                        <div class="textcard__wrapper">
+                            <div class="itemservices"><img src="./img/svg/modern.svg"></div>
+                            <h1 class="services__title">Modern Solutions</h1>
+                            <h1 class="services__text">Specializing in next-level business solutions, we optimize efficiency.</h1>
+                        </div>
+                    </a>
+                </article>
+              </div>
+            </div>
+        </div>
+        </article>
+    </section>
+    <article id="aboutus">
+        <section class="aboutus">
+            <div class="wrapper">     
+                    <div class="aboutus__wrapper">
+                        <h1 class="title4">WE SPECIALIZED IN IT INFRASTRUCTURE AND SECURITY.</h1>
+                        <div class="aboutustext__wrapper">
+                            <h1 class="title5">Our mission to develop and uphold cutting-edge tech solutions, ensuring reliability, efficiency, and protection.</h1>
+                            <h1 class="title6">We're an experienced IT infrastructure and security firm, driven by innovation since day one.<p> We collaborate closely with our clients, crafting personalized solutions that align perfectly with their goals and needs.<p> Our team boasts deep expertise in navigating today's complex information environment. We understand that a solid infrastructure is the foundation of business success. </h1>
+                            <div class="button">
+                                <a href="#getintouch" class="button__title">Get in Touch</a>
+                            </div>
+                    </div>
+                    </div>
+                </section>     
+            </div>
+        </section>
+    </article>        
+    <section class="aboutus2">
+        <div class="wrapper">
+               <div class="aboutus2_wrapper">
+                    <div class="aboutustext">
+                        <ul class="aboutustext">
+                            <li class="title7">ALL OF OUR EMPLOYEES ARE CERTIFIED PROFFESIONALS.</li>
+                            <li class="title8">Our team boasts deep expertise in navigating today's complex information environment. We understand that a solid infrastructure is the foundation of business success.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="aboutusimg1">
+                        <img src="./img/synpart.png" class="synpart">
+                        <img src="./img/svg/Cisco.svg" class="cisco">
+                    </div>
+                        <img src="./img/aws.png" class="aws">
+                </div>
+                    <img src="./img/Crowdstrike.png" class="crowdstrike">
+                    <img src="./img/Poly-HP-Logo.png" class="polyhp">
+                    <img src="./img/apple.png" class="apple">
+        </div>
+    </section>
+    </div>
+    <section class="getintouch">
+        <div class="wrapper">
+            <div class="getintouch_wrapper">
+                <article id="getintouch">
+                    
+                        
+                            <div class="getintouchtext">
+                                <h1 class="title9">GET IN TOUCH</h1>
+                                <h1 class="title10">Get in touch to learn more about our IT infrastructure services and how we can help you achieve your business goal.</h1>                   
+                                <div class="mail">
+                                    <img src="./img/svg/mail.svg">
+                                    <h1 class="mailtext">info@x-ibis.com</h1>
+                                </div>
+                                <div class="phone">
+                                    <img src="./img/svg/phone.svg">
+                                    <h1 class="phonetext">+48 694 670 955</h1>
+                                </div>
+                                <div class="pointer">
+                                    <img src="./img/svg/pointer.svg">
+                                    <h1 class="pointertext">Warsaw, Poland</h1>
+                                </div>
+                            </div>
+                        
+                    
+                </article>
+            
+            
+                <form action="https://api.comfyform.com/s/6552955ed45c99f05f9f2099/" method="POST">
+                    <div class="formwrapper">
+                        
+                                <div class="formtext">
+                                    <div class="formline">
+                                        <input type="text" id="username" name="username" required placeholder="Name">
+                                        <label for="username"></label>
+                                    </div>
+                                    <div class="formline">
+                                        <input type="email" id="useremail" name="useremail" required placeholder="Email">
+                                        <label for="useremail"></label>
+                                    </div>
+                                    <div class="formline">
+                                        <input type="text" id="phonenumber" name="phonenumber" required placeholder="Phone number">
+                                        <label for="phonenumber"></label>
+                                    </div>
+                                    <div class="formline">
+                                        <input type="text" id="message" name="message" required placeholder="Message">
+                                        <label for="message"></label>
+                                    </div>    
+                                </div>                                     
+                                    <div class="formbutton">
+                                        <input type="submit" value="Sent">
+                                    </div>    
+                    </div>                          
+                        
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__wrapper">
+                <div class="footer_logo">
+                    <a href="/xibisen/xibis.html" class="footer__logo-link">
+                     <img src="./img/svg/Group.svg" alt="X-IBIS" class="footer__logo-pic">
+                    </a>
+                </div> 
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="xibis.html" class="footer__link">Home</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#services" class="footer__link">Services</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#aboutus " class="footer__link">About us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#partners" class="footer__link">Clients</a>
+                        </li>
+                        <li class="footer__item">
+                          <a href="https://www.linkedin.com/company/x-ibis/">
+                           <img src="./img/svg/in.svg">
+                           </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="arrowup">
+                    <a href="#header" class="up-button-svg">
+                        <img src="./img/svg/arrowup.svg" class="hover">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

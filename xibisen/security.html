@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-IBIS</title>
+    <link rel="stylesheet" href="./css/security.css">
+    <link rel="icon" href="./img/svg/x.svg" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                <div class="header_logo">
+                    <a href="/xibisen/xibis.html" class="header__logo-link">
+                     <img src="./img/svg/Group.svg" alt="X-IBIS" class="header__logo-pic">
+                    </a>
+                </div>  
+                    <nav class="header__nav">
+                      <ul class="header__list">
+                          <li class="header__item">
+                              <a href="xibis.html" class="header__link">Home</a>
+                          </li>
+                          <li class="header__item">
+                              <a href="/xibisen/xibis.html#services" class="header__link">Services</a>
+                          </li>
+                          <li class="header__item">
+                              <a href="/xibisen/xibis.html#aboutus" class="header__link">About us</a>
+                          </li>
+                          <li class="header__item">
+                              <a href="/xibisen/xibis.html#getintouch" class="header__link">Contact us</a>
+                          </li>
+                          <li class="globallang">
+                            <div class="globalsel">
+                                <img src="./img/svg/globalbl.svg" class="default">
+                                <img src="./img/svg/global.svg" class="hover">
+                            </div>
+                            <div class="langsel">
+                                    
+                                    <a href="/xibisen/security.html" class="lang">EN</a>
+                                    <p></p><a href="/xibispl/security_pl.html" class="lang">PL</a>
+                                    
+                                    
+                                
+                            </div>
+                          </li>
+                      </ul>
+                    </nav>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <section class="security">
+            <div class="textandarrow">
+                <div class="textwrapper">
+                    <h1 class="title">SECURITY</h1>
+                    <h1 class="title2">We offer comprehensive solutions to detect, prevent and respond to cyber threats.</h1>
+                </div>
+                <section class="back__button">
+                    <div class="arrowback">
+                        <a href="/xibisen/xibis.html" class="back-button-svg">
+                            <img src="./img/svg/arrowback.svg" class="default">
+                            <img src="./img/svg/arrowbackh.svg" class="hover">
+                        </a>
+                    </div>
+                    <h1 class="title3">Back to Services</h1>
+                </section>
+            </div>
+            <div class="custom-scrollbar-container">
+                <div class="custom-scrollbar" id="custom-scrollbar">
+                    <div class="custom-thumb" id="custom-thumb"></div>
+                </div>                          
+                <div class="scroll-content" id="scroll-content">
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Identification and Authentication</div>
+                        <div class="scrolltext">Implement identification and two-factor authentication mechanisms to ensure that only authorized users access systems.</div>        
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">                                 
+                        <div class="scrolltitle">Access Rights Management</div>
+                        <div class="scrolltext">Limit users' access rights by providing the minimum necessary privileges according to their roles and responsibilities.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Data Encryption</div>
+                        <div class="scrolltext">Apply encryption to protect data at rest and in transit, ensuring privacy even in the event of leaks.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Monitoring and Threat Detection</div>
+                        <div class="scrolltext">Implement monitoring systems that analyze activity in real time and detect anomalous behaviors that indicate possible threats.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Antivirus and Antimalware Protection</div>
+                        <div class="scrolltext">Use up-to-date antivirus and antimalware software to detect and neutralize malware.</div>                                    
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">User Training and Awareness</div>
+                        <div class="scrolltext">Provide regular cybersecurity training to employees to reduce the risks of social engineering.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Incident Planning and Response</div>
+                        <div class="scrolltext">Develop a plan to respond to security incidents, including procedures for notification, recovery, and timely communication to stakeholders.</div>
+                    </div>
+                    <hr>
+                    <div class="scrollwrapper">
+                        <div class="scrolltitle">Audit and Review of Systems</div>
+                        <div class="scrolltext">Conduct regular security audits to identify vulnerabilities, verify compliance, and make improvements to the security strategy.</div>
+                    </div>
+                </div>
+                        
+        </section>
+    </div>
+    <script>
+        var scrollContent = document.getElementById('scroll-content');
+        var customScrollbar = document.getElementById('custom-scrollbar');
+        var customThumb = document.getElementById('custom-thumb');
+        var thumbHeight = 100; 
+        var scrollContentHeight = scrollContent.scrollHeight;
+        var scrollableContentHeight = scrollContent.clientHeight;
+
+        customThumb.style.height = thumbHeight + 'px';
+
+        scrollContent.addEventListener('scroll', function() {
+            var scrollShare = scrollContent.scrollTop / (scrollContentHeight - scrollableContentHeight);
+            var thumbTop = scrollShare * (scrollableContentHeight - thumbHeight);
+            customThumb.style.top = thumbTop + 'px';
+        });
+
+        customScrollbar.addEventListener('mousedown', startDrag);
+
+        function startDrag(e) {
+            e.preventDefault();
+            var startY = e.pageY - customThumb.offsetTop;
+            document.addEventListener('mousemove', dragThumb);
+            document.addEventListener('mouseup', stopDrag);
+
+            function dragThumb(e) {
+                e.preventDefault();
+                var newY = e.pageY - customScrollbar.getBoundingClientRect().top;
+                var newTop = Math.min(Math.max(0, newY - startY), scrollableContentHeight - thumbHeight);
+                customThumb.style.top = newTop + 'px';
+
+                var scrollShare = newTop / (scrollableContentHeight - thumbHeight);
+                scrollContent.scrollTop = scrollShare * (scrollContentHeight - scrollableContentHeight);
+            }
+
+            function stopDrag() {
+                document.removeEventListener('mousemove', dragThumb);
+                document.removeEventListener('mouseup', stopDrag);
+            }
+        }
+    </script>
+</body>
+</html>
